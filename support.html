@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spades VIP Support</title>
+  <link rel="icon" type="image/png" href="gameIcon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-bg: #181a20;
+      --secondary-bg: #23262f;
+      --accent: #ffb400;
+      --text: #f4f4f4;
+      --muted: #b0b3b8;
+      --border: #2c2f36;
+      --font-main: 'Inter', 'Segoe UI', Arial, sans-serif;
+      --primary-color: #7b9fff;
+      --secondary-color: #b3baff;
+      --background-color: #181c24;
+      --card-background: #23283a;
+      --border-radius: 12px;
+      --transition: all 0.3s ease;
+      --glow-color: #7b9fff44;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--primary-bg);
+      color: var(--text);
+      font-family: var(--font-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--secondary-bg);
+      padding: 2rem 1rem 1rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+    }
+    .logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      margin-bottom: 1rem;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--accent);
+    }
+    main {
+      flex: 1;
+      width: 100%;
+      max-width: 600px;
+      margin: 2rem auto;
+      background: var(--secondary-bg);
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    section {
+      margin: 0;
+    }
+    h2 {
+      color: var(--accent);
+      font-size: 1.3rem;
+      margin-bottom: 0.7rem;
+      font-weight: 600;
+    }
+    ul {
+      padding-left: 1.2rem;
+      margin: 0.5rem 0 0 0;
+    }
+    li {
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+      word-break: break-all;
+    }
+    .muted {
+      color: var(--muted);
+      font-size: 0.97rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1.2rem 0 1.5rem 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+      background: var(--primary-bg);
+      border-top: 1px solid var(--border);
+      margin-top: 2rem;
+    }
+    @media (max-width: 700px) {
+      main {
+        margin: 1rem 0.5rem;
+        padding: 1.2rem 0.7rem;
+      }
+      header {
+        padding: 1.2rem 0.5rem 0.7rem 0.5rem;
+      }
+      .logo {
+        width: 60px;
+        height: 60px;
+      }
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 30px;
+      background: var(--card-background);
+      border-radius: var(--border-radius);
+      box-shadow: 0 4px 16px #0006;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 10px 24px;
+      background: var(--primary-color);
+      color: #181c24;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1rem;
+      box-shadow: 0 2px 8px #0004;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+    }
+    .back-btn:hover {
+      background: var(--secondary-color);
+      color: #fff;
+      transform: translateY(-2px) scale(1.04);
+    }
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px 10px;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+      .section {
+        padding: 20px;
+      }
+    }
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.3rem;
+      }
+      .section {
+        padding: 15px;
+      }
+    }
+    .game-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px var(--glow-color);
+      transition: var(--transition);
+      background: #111;
+    }
+    .game-icon:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px var(--glow-color);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="gameIcon.png" alt="Spades VIP Game Icon" class="game-icon">
+      <h1>Support</h1>
+      <a href="index.html" class="back-btn">Privacy Policy</a>
+    </div>
+    <main>
+      <section>
+        <p>Welcome to the official support page for <strong>Spades VIP - Card Game</strong>. We're here to help you with any questions, issues, or feedback regarding your experience. Please review the information below or contact us directly for assistance.</p>
+      </section>
+      <section>
+        <h2>Contact Support</h2>
+        <p>For support, email us at <a href="mailto:albenlabs@gmail.com">albenlabs@gmail.com</a>. Please include your device model, iOS version, and a detailed description of your issue.</p>
+      </section>
+      <section>
+        <h2>Version/Build Info Reminder</h2>
+        <p>When contacting support, please include your current app version (found in Settings > About in the app).</p>
+      </section>
+      <section>
+        <h2>Common Issues & FAQs</h2>
+        <ul>
+          <li><strong>Lost progress or purchases?</strong> Try restoring purchases from the game settings. If issues persist, contact us with your Apple ID and purchase receipt.</li>
+          <li><strong>App crashes or won't load?</strong> Ensure you have the latest version installed. Restart your device and try again.</li>
+          <li><strong>Connection problems?</strong> Check your internet connection and try switching between Wi-Fi and cellular data.</li>
+          <li><strong>Other questions?</strong> Reach out to us and we'll be happy to assist!</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Response Time</h2>
+        <p class="muted">We aim to respond to all support requests within 24–48 hours (Monday–Friday).</p>
+      </section>
+      <section>
+        <h2>Feedback</h2>
+        <p>Your feedback helps us improve Spades VIP. If you have suggestions or comments, please let us know!</p>
+      </section>
+      <section>
+        <h2>Mobile & Accessibility Notice</h2>
+        <p>This support page is optimized for mobile devices and includes accessibility features. If you encounter any issues, please contact us.</p>
+      </section>
+      <section>
+        <h2>Privacy & Data Requests</h2>
+        <p>If you'd like to request data deletion or have concerns about your privacy, please refer to our <a href="index.html">Privacy Policy</a> or email us directly.</p>
+      </section>
+    </main>
+  </div>
+  <footer>
+    &copy; 2025 Spades VIP - Card Game. All rights reserved.
+  </footer>
+</body>
+</html> 
